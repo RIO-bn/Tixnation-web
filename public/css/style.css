@@ -1,0 +1,959 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.Background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)),
+        url(/img/background.png) no-repeat center center/cover;
+    z-index: -1;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    height: 100vh; /* Full screen height */
+}
+.form-container-Login {
+    background-color: rgba(253, 245, 245, 0.1);
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 200px;
+    border: 1px solid black;
+    border-radius: 30px;
+    padding: 10px;
+}
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+.LoginTitle {
+    color: white;
+    font-size: 65px;
+}
+.LoginSub {
+    color: white;
+    font-size: 30px;
+}
+
+.Nav {
+    /* display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #333;
+    padding: 15px 20px;
+    color: white;
+    background-image: linear-gradient(rgb(253, 131, 0), black 90%); */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to right, #fd8300, #000 90%);
+    padding: 15px 30px;
+    color: white;
+    font-family: "Segoe UI", sans-serif;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+.nav-links {
+    display: flex;
+    gap: 30px;
+    margin-right: 100px;
+    list-style: none; /* 🔒 Hides bullets */
+    padding: 0;
+    margin: 0;
+}
+.nav-links {
+    display: flex;
+    gap: 30px;
+    margin-right: 100px;
+    list-style: none; /* 🔒 Hides bullets */
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links li {
+    list-style: none; /* 🔒 Just in case */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    padding: 8px 12px;
+    transition: background 0.3s ease, transform 0.2s ease;
+    border-radius: 6px;
+}
+
+.nav-links a:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: scale(1.05);
+}
+
+/* Prevent color change on click/focus */
+.nav-links a:focus,
+.nav-links a:active {
+    color: white;
+    background: rgba(255, 255, 255, 0.1); /* optional */
+    outline: none;
+}
+
+.carouseltrending {
+    margin : 0 auto;
+    width: 900px;
+    height: 510px;
+    overflow: hidden;
+    border: 20px solid white;
+    border-radius: 8px;
+    box-shadow: 10px 25px 30px black;
+}
+.carousel-innertrending {
+    width: 100%;
+    display: flex;
+    animation: slide 16s infinite;
+}
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(0);
+    }
+    30% {
+        transform: translateX(-100%);
+    }
+    50% {
+        transform: translateX(-100%);
+    }
+    55% {
+        transform: translateX(-200%);
+    }
+    75% {
+        transform: translateX(-200%);
+    }
+    80% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+.cardcontainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-left: 30px;
+    margin-right: 50px;
+}
+.sublabel {
+    margin-left: 200px;
+}
+.containerfooter {
+    display: flex;
+}
+.footersegment {
+    width: 25vw;
+}
+.footer {
+    margin-top: 100px;
+    background-image: linear-gradient(black, rgba(25, 37, 36, 1) 70%);
+    width: 100vw;
+    color: white;
+}
+.footer-menu {
+    background-image: linear-gradient(black, rgba(25, 37, 36, 1) 70%);
+    width: 100vw;
+    color: white;
+}
+
+.copyright {
+    text-align: center;
+}
+.movie-page {
+    /* background-image: url("/img/moviebackground.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; */
+
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 60%, black 100%),
+        url("/img/moviebackground.jpg") center/cover no-repeat;
+    background-attachment: fixed; /* Keeps background in place while scrolling */
+    min-height: 100vh; /* Ensures full-page height */
+}
+
+.movie-page {
+    color: white;
+}
+
+.movie-page-container1 {
+    display: flex;
+    margin-top: 100px;
+    gap: 50px;
+    margin-left: 50px;
+}
+.icon-text {
+    display: flex;
+    align-items: center; /* Vertically aligns items */
+    gap: 8px; /* Adds space between icons and text */
+    color: white; /* Ensures text is visible on dark background */
+    font-size: 18px; /* Adjust text size */
+}
+
+.icon-text i {
+    font-size: 20px; /* Adjust icon size */
+}
+.movie-page-reservation {
+    background: linear-gradient(to right, #a67244, #8b5c2e);
+    color: white;
+    width: 160px;
+    height: 50px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+.movie-page-reservation,
+.movie-page-reservation:visited,
+.movie-page-reservation:hover,
+.movie-page-reservation:active {
+    color: white;
+    text-decoration: none;
+}
+
+
+/* Hover effect */
+.movie-page-reservation:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(to right, #b67d4a, #9b6633);
+}
+
+/* Remove default outline when clicked */
+.movie-page-reservation:focus,
+.movie-page-reservation:active {
+    outline: none;
+    background: linear-gradient(to right, #b67d4a, #9b6633);
+}
+.castlist {
+    margin-left: 50px;
+    display: flex;
+    gap: 30px;
+}
+.form-control {
+    width: 200px;
+}
+.seat-left {
+    display: grid;
+    grid-template-columns: repeat(8, 50px); /* 8 seats per row */
+    grid-template-rows: repeat(6, 50px); /* 6 rows */
+    gap: 10px; /* Spacing between seats */
+    padding: 20px;
+    justify-content: center;
+    background-color: #222;
+    border-radius: 10px;
+    width: max-content;
+    margin: auto;
+}
+
+/* Styling each seat (button) */
+.seat {
+    width: 50px;
+    height: 50px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Seat hover effect */
+.seat:hover {
+    background-color: limegreen;
+}
+
+/* Selected seat */
+.seat.selected {
+    background-color: red;
+}
+.seat-container {
+    display: flex;
+    gap: 15px;
+}
+.movie-screen {
+    text-align: center;
+}
+.Theater-Container {
+    margin-left: 50px;
+}
+.movie-selection {
+    margin-top: 50px;
+    margin-left: 50px;
+}
+.selection-container {
+    margin-left: 50px;
+}
+.seat-title {
+    margin-left: 50px;
+}
+.menu-page {
+    font-weight: 400;
+    font-style: normal;
+    overflow-x: hidden;
+    font-family: "poppins";
+}
+
+.food-carousel-container {
+    max-width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 400px;
+}
+
+.food-title {
+    margin-left: 30px;
+}
+.food-subheader {
+    margin-left: 30px;
+    margin-top: 50px;
+}
+.custom-card {
+    background: rgba(255, 255, 255, 0.2) !important; /* Semi-transparent */
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    border-radius: 15px !important; /* Rounded corners */
+    border: none; /* Remove border */
+    overflow: hidden; /* Apply rounded corners properly */
+}
+.custom-card img {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.menu-food-container {
+    display: flex;
+}
+.foodReservation {
+    margin-left: 30px;
+    background-color: aqua;
+    text-align: center;
+    width: 120px;
+    height: 60px;
+    border-radius: 5px;
+    border: white;
+    color: white;
+    margin-top: 50px;
+}
+
+.titlecard {
+    text-align: center;
+    margin-top: 100px;
+    font-size: 50px;
+}
+.description {
+    text-align: center;
+    margin-left: 100px;
+    margin-right: 100px;
+    line-height: 1.8; /* Adjust line spacing */
+}
+.video-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+#bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    font-size: 30px;
+
+    padding: 20px;
+    border-radius: 10px;
+}
+.overlay h1 {
+    font-size: 60px;
+    font-weight: bold;
+}
+.hero-banner {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+}
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.hero-title {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+}
+
+.banner {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: url("/img/bg-little-mermaid.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.banner::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.content {
+    position: relative;
+    max-width: 550px;
+    display: none;
+    visibility: hidden;
+    transform: scale(0);
+    transition: 0.5s;
+}
+
+.content.active {
+    display: block;
+    visibility: visible;
+    transform: scale(1);
+    transition: 0.5s;
+}
+.movie-title {
+    max-width: 250px;
+}
+.Image {
+    padding: 30px;
+}
+.banner .content h4 {
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: 400;
+    font-size: 30px;
+}
+
+.banner .content h4 span {
+    padding: 10px;
+    border-right: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.banner .content h4 span:first-child {
+    padding-left: 0;
+}
+
+.banner .content h4 span:last-child {
+    border-right: none;
+}
+.banner .content h4 span i {
+    background: var(--primary);
+    color: white;
+    padding: 0 8px;
+    display: inline-block;
+    border-radius: 2px;
+}
+.banner .content p {
+    font-size: 1em;
+    font-weight: 300;
+    line-height: 1.5em;
+    color: white;
+    margin: 10px 0 20px;
+}
+
+.banner .carousel-box {
+    position: relative;
+    min-width: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+.carousel {
+    position: relative;
+    height: 550px;
+    perspective: 1500;
+}
+.carousel .carousel-item {
+    width: 250px;
+    cursor: pointer;
+}
+
+.carousel .carousel-item img {
+    max-width: 235px;
+    border-radius: 10px;
+    transform: translateX(8px) translateY(-100px);
+    object-fit: cover;
+    object-position: center;
+}
+
+.carousel-food {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+    margin-bottom: 0;
+}
+
+.list {
+    width: 100%;
+    height: 100%;
+}
+
+.item {
+    width: 100%;
+    height: 100%;
+    background-color: var(--background);
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    display: none;
+}
+.item img.fruit {
+    width: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 15;
+    pointer-events: none;
+}
+.item .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 12rem;
+    color: #eee;
+    font-weight: bold;
+    font-family: system-ui;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+.item.active {
+    display: block;
+}
+.item.hidden {
+    display: block;
+    pointer-events: none;
+    background-color: transparent;
+    z-index: 1;
+}
+
+#prev,
+#next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solid #eee9;
+    background-color: #eee5;
+    color: #eee;
+    font-size: x-large;
+    font-family: monospace;
+    cursor: pointer;
+    z-index: 15;
+}
+#prev {
+    left: 20px;
+}
+#next {
+    right: 20px;
+}
+
+@keyframes toActive {
+    from {
+        top: 100%;
+        opacity: 0;
+    }
+}
+@keyframes toOut {
+    from {
+        top: 50%;
+        opacity: 1;
+    }
+}
+.item.active img.fruit {
+    animation: toActive 0.5s ease-in-out 1;
+}
+.item.hidden img.fruit {
+    animation: toOut 0.8s ease-in-out 1;
+    top: -100%;
+    opacity: 0;
+}
+.item.active .content {
+    animation: toActive 0.8s ease-in-out 1;
+}
+.item.hidden .content {
+    opacity: 0;
+}
+
+.carousel-food.right .item.active img.fruit {
+    animation: toActivePrev 0.5s ease-in-out 1;
+}
+.carousel-food.right .item.hidden img.fruit {
+    animation: toOut 0.8s ease-in-out 1;
+    top: 100%;
+    opacity: 0;
+}
+.carousel-food.right .item.active .content {
+    animation: toActivePrev 0.8s ease-in-out 1;
+}
+
+@keyframes toActivePrev {
+    from {
+        top: 0;
+        opacity: 0;
+    }
+}
+
+:root {
+    --width-mockup: calc(371px / 1.5);
+    --height-mockup: calc(673px / 1.5);
+}
+
+.mockup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    --left: 0%;
+    transform: translate(-50%, -50%);
+    height: var(--height-mockup);
+    width: var(--width-mockup);
+    background: url("/img/mockup.png") 0 0 no-repeat,
+        url("/img/Strawberry.png    ") var(--left) 0;
+    background-size: auto 100%;
+    background-blend-mode: multiply;
+    mask-image: url("/img/mockup.png");
+    mask-size: auto 100%;
+    -webkit-mask-image: url("/img/mockup.png");
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: auto 100%;
+    transition: background 0.5s;
+}
+
+.leaves {
+    position: absolute;
+    width: 170px;
+    height: 170px;
+    background-image: url("/img/leaves.png");
+    background-size: 100%;
+    top: calc((50% - (var(--height-mockup) / 1.7)));
+    left: calc((50% + (var(--width-mockup) / 5)));
+}
+
+@media screen and (max-width: 768px) {
+    .item .content {
+        transform: translate(-50%, -50%) scale(0.5);
+    }
+    .item img.fruit {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.section1 {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+}
+.section1::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, #094b65, transparent);
+    z-index: 10;
+}
+
+.section1 #text {
+    position: absolute;
+    color: #094b65;
+    font-size: 8vw;
+    text-align: center;
+    line-height: 0.55em;
+}
+
+.span {
+    font-size: 0.2em;
+    letter-spacing: 3px;
+    font-weight: 400;
+}
+
+.sec {
+    position: relative;
+    overflow: auto;
+    background-color: #094b65;
+    bottom: 0;
+    color: wheat;
+}
+
+.section1 img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+.food-container {
+    margin-left: 50px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.food-column {
+    flex: 1;
+    min-width: 300px;
+}
+
+.food-item {
+    margin-bottom: 15px;
+
+    padding: 10px;
+    border-radius: 5px;
+}
+.Choose {
+    margin-left: 50px;
+}
+.collection-title {
+    font-size: 28px;
+    color: #333;
+    text-align: center;
+    margin: 40px 0 20px;
+    font-weight: bold;
+}
+
+.movie-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 0 20px;
+}
+
+.movie-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    width: 200px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.movie-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.movie-image {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-bottom: 1px solid #eee;
+}
+
+.movie-card a {
+    display: block;
+    padding: 12px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    transition: color 0.2s;
+}
+
+.movie-card a:hover {
+    color: #ff6600;
+}
+
+@media (max-width: 768px) {
+    .movie-card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .movie-card {
+        width: 90%;
+    }
+}
+
+.ticket-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 3rem 1rem;
+    background-color: #f3f4f6; /* light gray bg for contrast */
+    min-height: 100vh;
+}
+
+.ticket-title {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 2.5rem;
+    color: #92400e;
+}
+
+.ticket-card {
+    background-color: #fff8dc; /* creamy yellow like ticket */
+    border: 2px solid #fcd34d;
+    border-radius: 1rem;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    margin-bottom: 2.5rem;
+    position: relative;
+}
+
+.ticket-id {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #78350f;
+    margin-bottom: 0.75rem;
+}
+
+.ticket-info {
+    color: #444;
+    margin-bottom: 0.4rem;
+}
+
+.ticket-price {
+    font-weight: bold;
+    color: #15803d;
+}
+
+.ticket-food-title {
+    font-size: 1.125rem;
+    font-weight: bold;
+    color: #92400e;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.ticket-food-list {
+    list-style: disc inside;
+    color: #333;
+    margin-bottom: 0.75rem;
+}
+
+.ticket-food-empty {
+    font-style: italic;
+    color: #6b7280;
+}
+
+.ticket-button {
+    background-color: #dc2626;
+    color: white;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.ticket-button:hover {
+    background-color: #b91c1c;
+}
+
+.ticket-form {
+    margin-top: 1.5rem;
+}
+
+.ticket-empty-message {
+    text-align: center;
+    color: #666;
+    font-size: 1.125rem;
+}
+
+/* notch kiri-kanan seperti tiket */
+.ticket-notch {
+    position: absolute;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: #fff8dc;
+    border: 2px solid #fcd34d;
+    border-radius: 9999px;
+    top: 2rem;
+}
+
+.ticket-notch-left {
+    left: -0.75rem;
+}
+
+.ticket-notch-right {
+    right: -0.75rem;
+}
